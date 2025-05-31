@@ -59,7 +59,7 @@ body{
     position: fixed;
     z-index: 100;
     color: #F4F4F4;
-    background:linear-gradient(180deg,#092046,#0B1A34);
+    background:linear-gradient(180deg,#0e3066,#0B1A34);
     opacity: 70%;
     border-bottom:none;
     transition: background 0.3s ease,opacity 0.3s ease;
@@ -80,10 +80,28 @@ body{
     text-decoration: none;
     color: #a7b6d1;
 }
-.nav-bar>nav>h1{
+/* .hamburger style */
+
+.hamburger>#menu-toggle{
     display: none;
-     cursor: pointer;
 }
+
+.hamburger>.menu-icon{
+      width: 20px;
+      height: 22px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 2px;
+      cursor: pointer;
+    }
+.menu-icon>span{
+        display: none;
+        height: 10px;
+        width: 22px;
+        background: #eeeaea;
+        border-radius: 2px;
+    }
 
 .content{
     position: relative;
@@ -93,6 +111,7 @@ body{
 .left{
     padding-left: 9vw;
     padding-top: 12vh;
+    margin-top: 10vh;
 }
 .left img{
     height: 200px;
@@ -109,6 +128,10 @@ body{
     background-color: #10264b;
     color: #F4F4F4;
     cursor: pointer;
+}
+.left>button>a{
+    text-decoration: none;
+    color:white;
 }
 .left>h1{
     color: #F4F4F4;
@@ -132,6 +155,7 @@ body{
 
 
 /* about me styling section */
+
 .about{
     width: 100%;
     margin-top: 20vh;
@@ -153,7 +177,7 @@ body{
 }
 .about-me{
     position: relative;
-    height: 100%;
+    height: 100vh;
     width: 50%;
     color: #F4F4F4;
     padding: 90px 0px 0px 30px;
@@ -322,17 +346,25 @@ label{
 
 @media (max-width:320px){
     .nav-bar{
-        background-color: blue;
-        height: 10vh;
+        height: 12vh;
         padding: 0;
         padding-right: 70vw;
     }   
     .nav-bar>nav>li{
         display: none;
     }
-    .nav-bar>nav>h1{
+
+
+    /* hamburger styling */
+    
+
+    .hamburger>.menu-icon{
+        display: flex;
+    }
+    .menu-icon>span{
         display: block;
     }
+    
     .content{
         width: 100%;
     }
@@ -358,6 +390,57 @@ label{
         width: 60%;
     }
 
+    /* about section styling */
+
+    
+.about{
+    width: 100%;
+    height: 100%;
+    margin-top: 10vh;
+}
+/* .about:before{
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/about.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    filter: brightness(40%) blur(1px);
+} */
+.about-me{
+    position: relative;
+    height: 87vh;
+    width: 100%;
+    color: #F4F4F4;
+    padding: 25px;
+    line-height: 25px;
+    text-align: justify;
+
+>h1{
+    text-transform: uppercase;
+    color: #315086;
+    margin-bottom: 10px;
+
+}
+>p{
+    text-transform: uppercase;
+    color: #eeeaea;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+>p>span{
+    color: #37278f;
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: bold;
+}
+}
     /* skills styling */
 
 
@@ -419,18 +502,23 @@ label{
 /* 2nd meadia   queries */
 
 @media (max-width:768px){
+    /* hamburger styling */
+
+    .hamburger>.menu-icon{
+     display: flex;
+    }
+    .menu-icon>span{
+      display: block;
+    }
     .nav-bar{
-        background-color: blue;
-        height: 10vh;
+        height: 12vh;
         padding: 0;
         padding-right: 70vw;
     }   
     .nav-bar>nav>li{
         display: none;
     }
-    .nav-bar>nav>h1{
-        display: block;
-    }
+
     .content{
         width: 100%;
     }
