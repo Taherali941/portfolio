@@ -313,7 +313,6 @@ progress::-webkit-progress-value{
 
 .skills{
     background-color: var(--bg-skills);
-    overflow: scroll;
 
 >h1{
     text-align: center;
@@ -358,7 +357,7 @@ progress::-webkit-progress-value{
     font-family: var(--secondary-text-font);
 }
 .card-img>i{
-    color: orangered;
+    color: white;
     font-size: 50px;
 }
 .card-img>img{
